@@ -30,7 +30,7 @@ add_executable(aoc2024
         src/day02/day02.cpp
         src/day02/day02.h
         # Add more day sources as you progress
-        )
+        include/AocUtils.h)
 
 # Include directories
 target_include_directories(aoc2024 PRIVATE

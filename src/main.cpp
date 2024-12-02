@@ -44,7 +44,6 @@ int main(int argc, char* argv[]) {
 
     try {
         int day = std::stoi(argv[1]);
-        std::cout << "day: " << day << "\n";
         std::string input_path = argv[2];
         run_day(day, input_path);
     } catch (const std::exception& e) {
