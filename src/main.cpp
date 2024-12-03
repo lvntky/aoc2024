@@ -33,6 +33,7 @@ void run_day(int day, const std::string& input_path) {
             break;
         case 3:
             day03::printMultiply(input_path);
+            day03Part02::printMultiplyConditional(input_path);
             break;
         default:
             std::cerr << "Day " << day << " not implemented yet.\n";

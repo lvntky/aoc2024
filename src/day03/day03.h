@@ -14,5 +14,10 @@ public:
 
 };
 
+class day03Part02 : day03 {
+public:
+    static void printMultiplyConditional(const std::string& file);
+};
+
 
 #endif //ADVENTOFCODE2024_DAY03_H
