@@ -70,10 +70,13 @@ public:
         std::smatch matches;
         std::vector<std::string> results;
 
-        if (std::regex_search(input, matches, re)) {
-            for (size_t i = 1; i < matches.size(); ++i) {
-                results.push_back(matches[i].str());
-            }
+        auto begin = input.cbegin();
+        auto end = input.cend();
+
+        // Use regex_iterator for multiple matches
+        while (std::regex_search(begin, end, matches, re)) {
+            results.push_back(matches.str()); // Full match
+            begin = matches.suffix().first;  // Move past the current match
         }
         return results;
     }

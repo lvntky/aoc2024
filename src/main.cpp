@@ -6,6 +6,7 @@
 // Day headers
 #include "day01/day01.h"
 #include "day02/day02.h"
+#include "day03/day03.h"
 
 namespace fs = std::filesystem;
 
@@ -29,6 +30,9 @@ void run_day(int day, const std::string& input_path) {
             day02::printValidRows(input_path);
             std::cout << "Part 02:" << "\n";
             day02Part02::printTolerated(input_path);
+            break;
+        case 3:
+            day03::printMultiply(input_path);
             break;
         default:
             std::cerr << "Day " << day << " not implemented yet.\n";
